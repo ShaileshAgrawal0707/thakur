@@ -3,3 +3,4 @@ gTTS==2.5.3
 googletrans==4.0.0-rc1
 playsound==1.2.2
 SpeechRecognition==3.10.4
+vosk==0.3.50
