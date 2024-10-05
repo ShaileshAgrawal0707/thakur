@@ -3,3 +3,4 @@ gTTS
 SpeechRecognition
 googletrans==4.0.0-rc1  # Note: This is the latest stable version for googletrans.
 playsound==1.2.2  # There are different versions depending on the platform
+pyaudio
