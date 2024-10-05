@@ -79,8 +79,8 @@ to_language = get_language_code(to_language_name)
 
 # Adding buttons in a more streamlined layout
 col_start, col_stop = st.columns(2)
-start_button = col_start.button("▶️ Start Translation", use_container_width=True)
-stop_button = col_stop.button("⏹️ Stop Translation", use_container_width=True)
+start_button = col_start.button("▶️ Start Translation")
+stop_button = col_stop.button("⏹️ Stop Translation")
 
 # Placeholder for translation output and progress bar
 output_placeholder = st.empty()
