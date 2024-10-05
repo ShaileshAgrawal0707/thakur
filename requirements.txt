@@ -1,6 +1,5 @@
-streamlit==1.15.0
-gTTS==2.5.3
-googletrans==4.0.0-rc1
-playsound==1.2.2
-SpeechRecognition==3.10.4
-vosk==0.3.50
+gtts
+pygame
+streamlit
+speechrecognition
+googletrans==3.1.0a0
