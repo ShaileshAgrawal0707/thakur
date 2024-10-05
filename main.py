@@ -1,15 +1,14 @@
 import os
 import time
-import pygame
 from gtts import gTTS
 import streamlit as st
 import speech_recognition as sr
 from googletrans import LANGUAGES, Translator
+from playsound import playsound  # Use playsound for audio playback
 
 isTranslateOn = False
 
 translator = Translator()  # Initialize the translator module.
-pygame.mixer.init()  # Initialize the mixer module.
 
 # Create a mapping between language names and language codes
 language_mapping = {name: code for code, name in LANGUAGES.items()}
@@ -23,9 +22,8 @@ def translator_function(spoken_text, from_language, to_language):
 def text_to_voice(text_data, to_language):
     myobj = gTTS(text=text_data, lang='{}'.format(to_language), slow=False)
     myobj.save("cache_file.mp3")
-    audio = pygame.mixer.Sound("cache_file.mp3")  # Load a sound.
-    audio.play()
-    os.remove("cache_file.mp3")
+    playsound("cache_file.mp3")  # Use playsound to play the audio
+    os.remove("cache_file.mp3")  # Remove the audio file after playing
 
 def main_process(output_placeholder, source_caption_box, target_caption_box, progress_bar, from_language, to_language):
     global isTranslateOn
@@ -52,7 +50,7 @@ def main_process(output_placeholder, source_caption_box, target_caption_box, pro
             target_caption_box.text_area(f"**Target ({to_language}):**", translated_text.text, height=150)
             
             progress_bar.progress(100)
-            text_to_voice(translated_text.text, to_language)
+            text_to_voice(translated_text.text, to_language)  # Convert translated text to voice
             time.sleep(1)
             progress_bar.empty()  # Clear progress bar after completion
 
