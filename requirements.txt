@@ -3,3 +3,4 @@ gtts
 speechrecognition
 googletrans==4.0.0-rc1  # Ensure you have the correct version
 playsound
+PyAudio
