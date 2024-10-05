@@ -1,6 +1,6 @@
 streamlit
 gtts
-speechrecognition
-googletrans==4.0.0-rc1  # Ensure you have the correct version
-playsound
-PyAudio
+SpeechRecognition
+googletrans==4.0.0-rc1
+playsound==1.2.2
+pyaudio==0.2.11
